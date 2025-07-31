@@ -460,6 +460,14 @@ ul.projects {
 
     svg.icon-svg {
       margin-left: variables.$icon-space;
+      display: none;
+    }
+
+    a.icon-user::after {
+      padding-left: 2px;
+      content: "\2605";
+      color: #fc8c12;
+      font-size: 1em;
     }
   }
 
