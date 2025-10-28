@@ -162,6 +162,7 @@ $wiki-text:                     $gray-950 !default;
 $wiki-font-size:                16px !default;
 $wiki-line-height:              1.6 !default;
 $wiki-preview-bg:               $body-bg !default;
+$wiki-copy-pre-padding:         0 3px 3px 3px !default;
 
 $toc-bg:                        $gray-50 !default;
 $toc-border:                    $gray-300 !default;
@@ -696,6 +697,44 @@ $issue-heading-size:            1.75 !default;
 
 $issue-attribute-padding-v:     3px !default;
 $issue-attribute-padding-h:     5px !default;
+
+
+// Initials avatars colors
+
+$intitials-avatars-colors-map: (
+  0: (
+    background:                 $red,
+    color:                      $white
+  ),
+  1: (
+    background:                 $orange,
+    color:                      $black
+  ),
+  2: (
+    background:                 $yellow,
+    color:                      $black
+  ),
+  3: (
+    background:                 $green,
+    color:                      $black
+  ),
+  4: (
+    background:                 $teal,
+    color:                      $black
+  ),
+  5: (
+    background:                 $blue,
+    color:                      $black
+  ),
+  6: (
+    background:                 $purple,
+    color:                      $black
+  ),
+  7: (
+    background:                 $pink,
+    color:                      $black
+  )
+) !default;
 
 
 // Speech "bubbles"
