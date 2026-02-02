@@ -460,13 +460,13 @@ ul.projects {
     }
 
     svg.icon-svg {
-      margin-left: variables.$icon-space;
       display: none;
+      margin-left: variables.$icon-space;
     }
 
     a.icon-user::after {
-      padding-left: 2px;
       content: "\2605";
+      padding-left: 2px;
       color: #fc8c12;
       font-size: 1em;
     }
@@ -896,6 +896,10 @@ div.table-list.boards {
         font-style: normal;
       }
     }
+  }
+
+  .document-group:not(:last-child) {
+    margin-bottom: variables.$line-height-computed;
   }
 }
 
