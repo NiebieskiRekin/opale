@@ -79,19 +79,17 @@ $brand-primary:                 $purple !default;
 $brand-text:                    $white !default;
 $brand-accent:                  shade($brand-primary, 100) !default;
 
-$brand-success:                 $green !default;
 $brand-info:                    $blue !default;
-$brand-warning:                 $orange !default;
-$brand-caution:                 $yellow !default;
+$brand-success:                 $green !default;
 $brand-important:               $purple !default;
+$brand-warning:                 $orange !default;
 $brand-danger:                  $red !default;
 
-$state-success:                 shade($green, 100) !default;
-$state-info:                    shade($blue, 100) !default;
-$state-warning:                 shade($orange, 100) !default;
-$state-caution:                 shade($yellow, 100) !default;
-$state-important:               shade($purple, 100) !default;
-$state-danger:                  shade($red, 100) !default;
+$state-info:                    shade($brand-info, 100) !default;
+$state-success:                 shade($brand-success, 100) !default;
+$state-important:               shade($brand-important, 100) !default;
+$state-warning:                 shade($brand-warning, 100) !default;
+$state-danger:                  shade($brand-danger, 100) !default;
 
 
 // Scaffolding
@@ -266,11 +264,11 @@ $priority-icon-space:           5px !default;
 $priority-default-icons-map: (
   lowest: (
     icon:                       tabler-icons.$ti-icon-arrow-down,
-    color:                      $green
+    color:                      shade($blue, 400)
   ),
   low2: (
     icon:                       tabler-icons.$ti-icon-chevrons-down,
-    color:                      color.mix($teal, $green)
+    color:                      color.mix($teal, $blue)
   ),
   low3: (
     icon:                       tabler-icons.$ti-icon-chevron-down,
@@ -278,15 +276,15 @@ $priority-default-icons-map: (
   ),
   default: (
     icon:                       tabler-icons.$ti-icon-equal,
-    color:                      $blue
+    color:                      $text-color
   ),
   high5: (
     icon:                       tabler-icons.$ti-icon-chevron-up,
-    color:                      $purple
+    color:                      $orange
   ),
   high4: (
     icon:                       tabler-icons.$ti-icon-chevron-up,
-    color:                      $orange
+    color:                      shade($orange, 600)
   ),
   high3: (
     icon:                       tabler-icons.$ti-icon-chevrons-up,
@@ -306,58 +304,58 @@ $priority-icons-map:            map.merge($priority-default-icons-map, $priority
 
 $priority-default-color-map: (
   lowest: (
-    border:                     shade($green, $table-color-border-shade),
-    background:                 $green,
+    border:                     shade($blue, $table-color-border-shade),
+    background:                 shade($blue, 100),
     color:                      $text-color,
-    link:                       shade($green, 700),
+    link:                       shade($blue, 700),
   ),
   low2: (
-    border:                     shade(color.mix($teal, $green), $table-color-border-shade),
-    background:                 color.mix($teal, $green),
+    border:                     shade(color.mix($teal, $blue), $table-color-border-shade),
+    background:                 shade(color.mix($teal, $blue), 200),
     color:                      $text-color,
-    link:                       shade(color.mix($teal, $green), 700),
+    link:                       shade(color.mix($teal, $blue), 700),
   ),
   low3: (
     border:                     shade($teal, $table-color-border-shade),
-    background:                 $teal,
+    background:                 shade($teal, 300),
     color:                      $text-color,
     link:                       shade($teal, 700),
   ),
   default: (
-    border:                     shade($blue, $table-color-border-shade),
-    background:                 $blue,
+    border:                     shade($text-color, $table-color-border-shade),
+    background:                 transparent,
     color:                      $text-color,
-    link:                       shade($blue, 700),
+    link:                       inherit,
   ),
   high5: (
-    border:                     shade($purple, $table-color-border-shade),
-    background:                 $purple,
+    border:                     shade($orange, $table-color-border-shade),
+    background:                 shade($orange, 200),
     color:                      $text-color,
-    link:                       shade($purple, 700),
+    link:                       shade($orange, 700),
   ),
   high4: (
     border:                     shade($orange, $table-color-border-shade),
-    background:                 $orange,
+    background:                 shade($orange, 300),
     color:                      $text-color,
     link:                       shade($orange, 700),
   ),
   high3: (
     border:                     shade(color.mix($red, $orange), $table-color-border-shade),
-    background:                 color.mix($red, $orange),
+    background:                 shade(color.mix($red, $orange), 300),
     color:                      $text-color,
     link:                       shade(color.mix($red, $orange), 700),
   ),
   high2: (
     border:                     shade($red, $table-color-border-shade),
-    background:                 $red,
+    background:                 shade($red, 300),
     color:                      $text-color,
     link:                       shade($red, 700),
   ),
   highest: (
     border:                     shade($red, $table-color-border-shade),
-    background:                 $red,
+    background:                 shade($red, 400),
     color:                      $text-color,
-    link:                       shade($red, 700),
+    link:                       shade($red, 800),
   )
 ) !default;
 $priority-custom-color-map:     () !default;
@@ -639,23 +637,23 @@ $sidebar-switch-size:           18px !default;
 
 // Flash messages (alerts)
 
-$flash-success-bg:              shade($green, 400) !default;
-$flash-success-border:          shade($green, 500) !default;
+$flash-success-bg:              shade($brand-success, 400) !default;
+$flash-success-border:          shade($brand-success, 500) !default;
 $flash-success-text:            $white !default;
 $flash-success-link:            $white !default;
 
-$flash-info-bg:                 shade($blue, 100) !default;
-$flash-info-border:             shade($blue, 200) !default;
-$flash-info-text:               shade($blue, 800) !default;
-$flash-info-link:               shade($blue, 900) !default;
+$flash-info-bg:                 shade($brand-info, 100) !default;
+$flash-info-border:             shade($brand-info, 200) !default;
+$flash-info-text:               shade($brand-info, 800) !default;
+$flash-info-link:               shade($brand-info, 900) !default;
 
-$flash-warning-bg:              shade($yellow, 200) !default;
-$flash-warning-border:          shade($yellow, 300) !default;
-$flash-warning-text:            shade($yellow, 800) !default;
-$flash-warning-link:            shade($yellow, 900) !default;
+$flash-warning-bg:              shade($brand-warning, 200) !default;
+$flash-warning-border:          shade($brand-warning, 300) !default;
+$flash-warning-text:            shade($brand-warning, 800) !default;
+$flash-warning-link:            shade($brand-warning, 900) !default;
 
-$flash-error-bg:                $red !default;
-$flash-error-border:            shade($red, 600) !default;
+$flash-error-bg:                $brand-danger !default;
+$flash-error-border:            shade($brand-danger, 600) !default;
 $flash-error-text:              $white !default;
 $flash-error-link:              $white !default;
 
@@ -773,20 +771,20 @@ $mardown-alerts-margin:         $padding-small-horizontal !default;
 $mardown-alerts-padding:        $padding-small-horizontal !default;
 $mardown-alerts-border:         4px solid !default;
 $markdown-alerts-map: (
+  note: (
+    color:                      $brand-info
+  ),
   tip: (
     color:                      $brand-success
   ),
-  note: (
-    color:                      $brand-info
+  important: (
+    color:                      $brand-important
   ),
   warning: (
     color:                      $brand-warning
   ),
   caution: (
-    color:                      $brand-caution
-  ),
-  important: (
-    color:                      $brand-important
+    color:                      $brand-danger
   )
 ) !default;
 
