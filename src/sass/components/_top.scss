@@ -150,7 +150,6 @@
   #header & {
     margin-top: math.floor((variables.$header-title-line-height + variables.$header-padding-vertical * 2 - variables.$input-height-base) * .5) - 1px;
     margin-right: variables.$header-padding-horizontal;
-    margin-bottom: variables.$padding-large-vertical;
     float: right;
     color: variables.$header-text;
   }
@@ -162,8 +161,18 @@
   form {
     display: inline-block;
 
+    label {
+      display: inline-block;
+      height: variables.$input-height-base;
+      margin-right: -5px;
+      padding: 0 variables.$padding-small-horizontal;
+      border-radius: variables.$border-radius-base 0 0 variables.$border-radius-base;
+      background-color: variables.$quick-search-label-bg;
+    }
+
     input {
       width: variables.$quick-search-width;
+      border-radius: variables.$quick-search-border-radius;
     }
   }
 
